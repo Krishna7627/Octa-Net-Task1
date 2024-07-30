@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Book My Show </title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            width: 100%;
+            position: absolute;
+
+        }
+
+        .header {
+            position: fixed;
+            background-color: rgb(44 45 58);
+            height: 60px;
+            width: 100%;
+            box-sizing: border-box;
+            overflow-y: hidden;
+        }
+
+        .head11 img {
+            width: 190px;
+            height: 90px;
+            margin-top: -14px;
+            float: left;
+        } 
+
+        .head12 input {
+            width: 500px;
+            height: 29px;
+            border: solid transparent 1px;
+            border-radius: 8px;
+            margin-top: 13px;
+            float: left;
+            padding-left: 19px;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .head13 {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .head13 button {
+            background-color: rgb(248, 68, 100);
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+            border: solid transparent 1px;
+            border-radius: 10px;
+            width: 70px;
+            height: 38px;
+            margin-right: 9px;
+        }
+
+        .head13 select {
+            background-color: transparent;
+            color: aliceblue;
+            border: solid transparent 1px;
+            margin-right: 30px;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .cont {
+            background-color: rgb(31 32 54);
+            height: 36px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .cont .item1 {
+            float: left;
+            margin-left: 78px;
+            margin-top: 8px;
+        }
+
+        .cont .item1 a {
+            text-decoration: none;
+            color: aliceblue;
+            margin-right: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .cont .item2 {
+            float: right;
+            margin-right: 70px;
+            margin-top: 8px;
+        }
+
+        .cont .item2 a {
+            text-decoration: none;
+            color: aliceblue;
+            margin-left: 9px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .newmovie {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .newmovie img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .newmovie div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+        }
+
+        marquee {
+            border-bottom: solid 1px rgb(255, 228, 228);
+            background-color: rgb(255, 228, 228);
+        }
+
+        marquee img {
+            position: sticky;
+            display: inline;
+        }
+
+        .pre1 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .pre1 img {
+            object-fit: fill;
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .pre {
+            background-color: rgb(0 32 54);
+            height: 590px;
+            margin-top: 100px;
+        }
+
+        .pre h1 {
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 34px;
+            padding-top: 40px;
+            font-size: 40px;
+        }
+
+        .pre h3 {
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 63px;
+            font-size: 24px;
+        }
+
+        .pre p {
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 63px;
+            opacity: 60%;
+        }
+
+        .abhi3 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi3 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi3 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        .abhi4 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi4 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi4 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        .abhi7 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi7 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi7 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        .abhi9 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi9 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi9 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        .abhi11 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi11 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi11 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        .abhi13 {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 40px;
+            margin-left: 40px;
+
+
+        }
+
+        .abhi13 img {
+
+            width: 230px;
+            height: 361px;
+            border: solid transparent 1px;
+            border-radius: 10px;
+        }
+
+        .abhi13 div {
+            border: solid transparent 1px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: larger;
+            box-sizing: border-box;
+            overflow: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            color: rgb(185, 197, 207);
+            text-align: center;
+
+        }
+
+        #abhiabhi {
+            margin-top: 70px;
+            height: 30px;
+        }
+
+        footer {
+            padding: 23px;
+            text-align: center;
+            box-shadow: rgb(0 0 0 / 24%)0px 3px 8px;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Full-width inputs */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Add a hover effect for buttons */
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra style for the cancel button (red) */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        /* Avatar image */
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+
+        /* The "Forgot password" text */
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        #aa {
+            margin-left: 660px;
+        }
+    </style>
+</head>
+
+
+
+</script>
+
+<body>
+    <div class="header" id="header">
+        <a href="https://in.bookmyshow.com/explore/home/jaipur">
+            <div class="head11"><img src="https://www.crafin.in/wp-content/uploads/2019/04/bookmyshow.png"></div>
+        </a>
+
+        <div class="head13">
+            <select>
+                <option>Jaipur </option>
+                <option>Mumbai </option>
+                <option>Goa </option>
+            </select>
+            <a href="https://in.bookmyshow.com/explore/home/jaipur"><button> Sign In </button></a>
+            <a href=""><button> Help ! </button></a>
+              
+        </div>
+    </div>
+
+    <div class="cont">
+        <div class="item1">
+            <a href="https://in.bookmyshow.com/explore/movies-jaipur">Movie</a>
+            <a href="https://in.bookmyshow.com/explore/c/stream">Stream <sup
+                    style="font-size: x-small; color:red; text-decoration:none; ">New</sup></a>
+            <a href="https://in.bookmyshow.com/explore/events-jaipur">Events</a>
+            <a href="https://in.bookmyshow.com/explore/plays-jaipur">Plays </a>
+            <a href="https://in.bookmyshow.com/explore/sports-jaipur">Sports</a>
+            <a href="https://in.bookmyshow.com/explore/activities-jaipur">Activities </a>
+            <a href="https://in.bookmyshow.com/buzz">Buzzz</a>
+        </div>
+        <div class="item2">
+            <a href="https://in.bookmyshow.com/list-your-show/">ListYourShow </a>
+            <a href="https://in.bookmyshow.com/voucher">Corporates</a>
+            <a href="https://in.bookmyshow.com/offers">Offers</a>
+            <a href="https://in.bookmyshow.com/giftcards">GiftCards</a>
+        </div>
+    </div>
+
+    <marquee>
+        <a href="https://in.bookmyshow.com/explore/c/icc-cricket-world-cup"><img
+                src="https://assets-in.bmscdn.com/promotions/cms/creatives/1693472198837_iccdesktop.jpg" alt=""></a>
+        <a href="https://in.bookmyshow.com/sports/motogp-2023-grand-prix-india/ET00361456"><img
+                src="https://assets-in.bmscdn.com/promotions/cms/creatives/1693561351496_motogpsepdesktop.jpg"
+                alt=" "></a>
+        <a href="https://in.bookmyshow.com/explore/stream-movies-stream-week-offer"><img
+                src="https://assets-in.bmscdn.com/promotions/cms/creatives/1694155301901_offeroftheweekdesktop.jpg"
+                alt=""></a>
+        <a href="https://in.bookmyshow.com/login?referer=/play-credit-card"><img
+                src="https://assets-in.bmscdn.com/promotions/cms/creatives/1694001640639_playcardwebbannerv2.jpg"
+                alt=""></a>
+    </marquee>
+    <div class="head12"><input type="text" placeholder="Search For Movies , Events , Plays , Sports etc.."></div>
+    <h2
+        style="margin-left: 52px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 900; color: rgb(22, 31, 31); margin-bottom: 10px;">
+        Recommended Movies
+    </h2>
+
+    <div class="newmovie">
+        <a href="https://in.bookmyshow.com/jaipur/movies/gadar-2-the-katha-continues/ET00338629">
+            <div class="movie1"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC4zLzEwICAyNTEuOEsgVm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00338629-adeyjbxpah-portrait.jpg"
+                    alt="Kuch bhi "><br> Gadar 2</div>
+        </a>
+        <a href="https://in.bookmyshow.com/jaipur/movies/dream-girl-2/ET00340111">
+            <div class="movie2"><img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,
+            fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny45LzEwICAzOS44SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,
+            ox-70:q-80/et00340111-bucsngjtyp-portrait.jpg" alt="Kuch bhi "><br>Dream Girl 2</br></div>
+        </a>
+        <a href="https://in.bookmyshow.com/jaipur/movies/raksha-bandhan/ET00136643">
+            <div class="movie3"><img
+                    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/raksha-bandhan-et00136643-1657007364.jpg"
+                    alt="Kuch bhi "><br>Raksha Bandhan</div>
+        </a>
+        <a href="https://in.bookmyshow.com/jaipur/movies/laal-singh-chaddha/ET00098735">
+            <div class="movie4"><img
+                    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/laal-singh-chaddha-et00098735-1658747608.jpg"
+                    alt="Kuch bhi "><br>Laal Singh Chaddha</div>
+        </a>
+        <a href="https://in.bookmyshow.com/jaipur/movies/jawan/ET00330424">
+            <div class="movie5"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-NTA2LjdLIExpa2Vz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00330424-bwebnujzgl-portrait.jpg"
+                    alt="Kuch bhi "><br>Jawan</div>
+        </a>
+    </div>
+
+    <div class="pre">
+
+        <h1>
+            &#x23E9; PREMIERE
+        </h1>
+        <p style="margin-left:100px ;">Watch new mivies at home, every friday </p>
+        <br>
+        <br>
+        <h3>
+            Premieres
+        </h3>
+        <p>
+            Brand new release at friday
+        </p>
+        <br>
+        <div class="pre1">
+            <a href="https://in.bookmyshow.com/jaipur/movies/the-alleys/ET00367930"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@bms_premiere_v1.png,oit-false,ofo-bottom_left:q-80/et00367930-xalznpwqxp-portrait.jpg"
+                    alt=""></a>
+            <a href="https://in.bookmyshow.com/jaipur/movies/no-hard-feelings/ET00355405"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@bms_premiere_v1.png,oit-false,ofo-bottom_left:q-80/et00355405-dknhczxbjc-portrait.jpg"
+                    alt=""></a>
+            <a href="https://in.bookmyshow.com/jaipur/movies/benedetta/ET00366374"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@bms_premiere_v1.png,oit-false,ofo-bottom_left:q-80/et00366374-rasqnzklbe-portrait.jpg"
+                    alt=""></a>
+            <a href="https://in.bookmyshow.com/jaipur/tv-series/hope-street-season-1/ET00356278"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@bms_premiere_v1.png,oit-false,ofo-bottom_left:q-80/et00356278-grgamqtjrm-portrait.jpg"
+                    alt=""></a>
+            <a href="https://in.bookmyshow.com/jaipur/movies/benedetta/ET00366374"><img
+                    src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@bms_premiere_v1.png,oit-false,ofo-bottom_left:q-80/et00366374-rasqnzklbe-portrait.jpg"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="f11">&#9751;</div>
+        <div class="f12"></div>
+        <div class="f13"></div>
+    </div>
+    <div class="abhi1" style="margin-top: 70px;">
+        <a href="https://in.bookmyshow.com/explore/c/stream"><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
+                alt="" srcset=""></a>
+    </div>
+    <div class="abhi2" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>The Best Of Live Events</h2>
+        </b><br>
+    </div>
+    <div class="abhi3">
+        <a href="https://in.bookmyshow.com/events/origami-workshop/ET00368728"><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NTArIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/workshop-and-more-web-collection-202211140440.png"
+                alt="" srcset=""></a>
+        <a href=""><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
+                alt="" srcset=""></a>
+        <a href=""><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NDArIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/comedy-shows-collection-202211140440.png"
+                alt="" srcset=""></a>
+        <a href=""><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/music-shows-collection-202211140440.png"
+                alt="" srcset=""></a>
+        <a href=""><img
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NCBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/esports-collection-202211140440.png"
+                alt="" srcset=""></a>
+    </div>
+    <div class="abhi5" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>Online Streaming Events</h2>
+        </b><br>
+    </div>
+    <div class="abhi4">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-VGh1LCA3IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363424-sjvytrdqcf-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00131211-lbjmwlzceq-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAzIFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00307978-gbstylvesw-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMCBKYW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00357347-wlwdbteuap-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363885-mpwsbuvfyd-portrait.jpg"
+            alt="" srcset="">
+    </div>
+    <div class="abhi6" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>Outdoor Events <b style="background-color: red; color: white;">NEW</b>
+            </h2>
+        </b><br>     
+    </div>
+    <div class="abhi7">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMiBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00361456-hfwxtlukfy-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxMyBPY3Q%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00364999-lzhgcmznag-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00305266-ynmxuvfnhm-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMyBEZWM%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365944-rpxlalndwh-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNiBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365564-vkrrafyjna-portrait.jpg"
+            alt="" srcset="">
+    </div>
+    <div class="abhi8" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>Laughter Therapy</h2>
+        </b><br>
+    </div>
+    <div class="abhi9">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyNCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00323501-mwcaupxpcu-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCA4IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355125-veblmgdxlu-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxIE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368222-rhbzbfbbgx-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00334259-hxwfpdflhf-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363702-jrlaefdaxl-portrait.jpg"
+            alt="" srcset="">
+    </div>
+    <div class="abhi10" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>Popular Events</h2>
+        </b><br>
+    </div>
+    <div class="abhi11">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMyBEZWM%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365944-rpxlalndwh-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyOSBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00366241-ywhepewscp-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-VGh1LCAyOCBEZWM%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358308-tjcllvwejm-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA3IE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368385-ybheapgqsa-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00316548-dwjtvemxfe-portrait.jpg"
+            alt="" srcset="">
+    </div>
+    <div class="abhi12" style="margin-left: 60px; margin-top: 70px;">
+        <b>
+            <h2>ICC'S MEN'S CWC & Other Sports</h2>
+        </b><br>
+    </div>
+    <div class="abhi13">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMiBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00361456-hfwxtlukfy-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00311494-mqkeaupfnf-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00311497-knbmavfwqf-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMCBKYW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00357347-wlwdbteuap-portrait.jpg"
+            alt="" srcset="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMCBKYW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00357347-wlwdbteuap-portrait.jpg"
+            alt="" srcset="">
+    </div>
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+
+        </div>
+        <div id="aa"></div>
+        <script>
+            function x() {
+                let sp = new Date();
+                let h = sp.getHours();
+
+                let m = sp.getMinutes();
+                let s = sp.getSeconds();
+
+                if (h < 12) {
+                    let w = h + ":" + m + ":" + s + "am";
+                    document.getElementById("aa").innerHTML = w;
+                }
+
+                else {
+                    let w = h + ":" + m + ":" + s + "pm";
+                    document.getElementById("aa").innerHTML = w;
+                }
+
+
+                setTimeout(x, 1000);
+             
+            
+            }
+            x();
+        </script>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+    <footer>
+        Copyright &copy; bookmyshow.com | all rights reserved
+    </footer>
+</body>
+
+</html>
